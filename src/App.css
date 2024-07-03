@@ -59,6 +59,8 @@ h1 {
   margin: 20px 0;
 }
 
+/* i dont get why the font size wont change?? */
+
 h2 {
   text-align: center;
   color: fff;
@@ -76,6 +78,7 @@ h3 {
 
 ul {
   color:#333;
+  font-size: 20px;
 }
 
 p {
@@ -88,8 +91,6 @@ h2, h3, p {
   text-align: center; /* center align the text */
   margin-bottom: 20px; /* adds space between each element */
 }
-
-
 
 section {
   display: flex;
