@@ -4,7 +4,8 @@ const PokemonCard = ({pokemonCard}) => {
 
     return (
         <>
-            <p>{pokemonCard.name}</p>
+            <img src={pokemonCard.details.sprites.other['official-artwork'].front_shiny} alt="image of pokemon" />
+            <p>{pokemonCard.details.name}</p>
         </>
     )
 
