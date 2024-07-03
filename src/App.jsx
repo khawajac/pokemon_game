@@ -1,5 +1,9 @@
-import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from './components/Home'
+import CardContainer from './containers/CardContainer'
+import GameContainer from './containers/GameContainer'
+import Navigation from './components/Navigation'
+import './App.css'
 
 function App() {
 
@@ -15,11 +19,11 @@ function App() {
           },
           {
             path: "/your-library",
-            element: <CardList />
+            element: <CardContainer />
           },
           {
             path: "/play",
-            element: <Game />
+            element: <GameContainer />
           }
         ]
       }
