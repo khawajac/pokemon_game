@@ -4,8 +4,10 @@ import PokemonCard from "./PokemonCard";
 
 const CardList = ({pokemonCards}) => {
     
-    const mappedPokemonCards = pokemonCards.map((pokemonCard) => {
-        return <PokemonCard pokemonCard={pokemonCard}/>
+    const mappedPokemonCards = pokemonCards.map((pokemonCard, index) => {
+        return <PokemonCard 
+        pokemonCard={pokemonCard}
+        key={index}/>
     })
     
     return (

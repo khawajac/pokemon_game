@@ -3,10 +3,15 @@ const PokemonCard = ({pokemonCard}) => {
 
 
     return (
-        <>
-            <img src={pokemonCard.details.sprites.other['official-artwork'].front_shiny} alt="image of pokemon" />
+
+            pokemonCard.details ?
+                <>
+            <img src={pokemonCard.details.sprites.other['official-artwork'].front_shiny} alt="" />
             <p>{pokemonCard.details.name}</p>
-        </>
+            </>
+                : 
+                <p>Loading pokemon</p>
+            
     )
 
 }
