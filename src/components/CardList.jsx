@@ -1,7 +1,4 @@
 import PokemonCard from "./PokemonCard";
-
-
-
 const CardList = ({pokemonCards}) => {
     
     const mappedPokemonCards = pokemonCards.map((pokemonCard, index) => {
@@ -12,8 +9,7 @@ const CardList = ({pokemonCards}) => {
     
     return (
         <>
-            <h2>Your Pokemon Cards</h2>
-            
+            <h2>Card Library</h2>
             <section>
                 {mappedPokemonCards}
             </section>

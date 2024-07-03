@@ -32,7 +32,6 @@ function App() {
 
   return (
     <>
-      <h1>Pokemon Game</h1>
       <RouterProvider router={router} />
     </>
   )
