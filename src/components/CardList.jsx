@@ -12,7 +12,8 @@ const CardList = ({pokemonCards}) => {
     
     return (
         <>
-            <h2>Cards go here</h2>
+            <h2>Your Pokemon Cards</h2>
+            
             <section>
                 {mappedPokemonCards}
             </section>
