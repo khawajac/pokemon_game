@@ -18,7 +18,7 @@ const CardContainer = () => {
     }, [])
 
     return(
-        <CardList />
+        <CardList pokemonCards={pokemonCards} />
     )
 }
 
