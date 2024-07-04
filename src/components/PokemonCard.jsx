@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const PokemonCard = ({pokemonCard}) => {
 
     // const handleViewButton = () => {
@@ -11,7 +12,7 @@ const PokemonCard = ({pokemonCard}) => {
             <section className="card">
                 <img src={pokemonCard.details.sprites.other['official-artwork'].front_shiny} alt="" />
                 <p><strong>{pokemonCard.details.name.toUpperCase()}</strong></p>
-                <button>View Details</button>
+                <button><Link to={`/your-library/${pokemonCard.details.id}/details`}>View Details</Link></button>
             </section>
             </>
                 : 
