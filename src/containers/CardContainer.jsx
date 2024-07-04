@@ -67,7 +67,7 @@ const CardContainer = () => {
               },
               {
                 path: "/your-library/:id/details",
-                element: <CardDetails />
+                element: <CardDetails pokemonCards={pokemonCards}/>
               },
               {
                 path: "/play",

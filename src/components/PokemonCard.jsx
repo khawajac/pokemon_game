@@ -22,4 +22,4 @@ const PokemonCard = ({pokemonCard}) => {
 
 }
 
-export default PokemonCard
+export default PokemonCard; 

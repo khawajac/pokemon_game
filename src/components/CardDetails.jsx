@@ -1,27 +1,29 @@
 import { Link } from "react-router-dom"
 
 
-const CardDetails = () => {
+const CardDetails = ({pokemonCards}) => {
 
 
     return (
+
+        pokemonCards.details ?
         <>
             <section>
-                <img src={pokemonCard.details.sprites.other['showdown'].front_shiny} alt="" />
-                <h2>{pokemonCard.details.name.toUpperCase()}</h2>
+                <h2>{pokemonCards.details.name.toUpperCase()}</h2>
+                <img src={pokemonCards.details.sprites.other['showdown'].front_shiny} alt="" />
                 <ul>
                     <p>Abilities</p>
-                    {pokemonCard.details.abilities.map((ability) => {
+                    {pokemonCards.details.abilities.map((ability) => {
                         return (
                             <li>{ability.name}</li>
                         )
                     })}
                 </ul>
-
             </section>
         </>
+            : 
+            <p className="loading">Loading pokemon</p>
     )
-
 }
 
-export default CardDetails
+export default CardDetails; 
