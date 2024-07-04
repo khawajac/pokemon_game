@@ -2,7 +2,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './components/Home'
 import CardContainer from './containers/CardContainer'
 import GameContainer from './containers/GameContainer'
-import Navigation from './components/Navigation'
 import './App.css'
 
 function App() {
@@ -11,12 +10,8 @@ function App() {
     [
       {
         path: "/",
-        element: <Navigation />,
+        element: <Home />,
         children : [
-          {
-            path: "/home",
-            element: <Home />
-          },
           {
             path: "/your-library",
             element: <CardContainer />
