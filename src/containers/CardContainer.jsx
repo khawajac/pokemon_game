@@ -58,12 +58,12 @@ const CardContainer = () => {
             element: <Navigation />,
             children : [
               {
-                path: "/home",
+                path: "/",
                 element: <Home />,
               },
               {
                 path: "/your-library",
-                element: <CardContainer />
+                element: <CardList pokemonCards={pokemonCards} />
               },
               {
                 path: "/your-library/:id/details",
@@ -80,7 +80,6 @@ const CardContainer = () => {
 
     return(
         <>
-            <CardList pokemonCards={pokemonCards} />
             <RouterProvider router={router} />
         </>
     )
