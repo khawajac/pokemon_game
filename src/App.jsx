@@ -3,6 +3,7 @@ import Home from './components/Home'
 import CardContainer from './containers/CardContainer'
 import GameContainer from './containers/GameContainer'
 import './App.css'
+import Navigation from './components/Navigation'
 
 function App() {
 
@@ -10,8 +11,12 @@ function App() {
     [
       {
         path: "/",
-        element: <Home />,
+        element: <Navigation />,
         children : [
+          {
+            path: "/home",
+            element: <Home />,
+          },
           {
             path: "/your-library",
             element: <CardContainer />
