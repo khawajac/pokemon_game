@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react"
 import CardList from "../components/CardList"
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from '../components/Home'
+import GameContainer from '../containers/GameContainer'
+import Navigation from '../components/Navigation'
+import CardDetails from '../components/CardDetails'
+
 
 const CardContainer = () => {
 
@@ -32,9 +38,6 @@ const CardContainer = () => {
         })
     }
 
-    
-
-
     useEffect(() => {
         fetchAllPokemon()
     }, [])
@@ -48,8 +51,38 @@ const CardContainer = () => {
         fetchAllPokemonDetails()
     }, [pokemonCards])
 
+    const router = createBrowserRouter(
+        [
+          {
+            path: "/",
+            element: <Navigation />,
+            children : [
+              {
+                path: "/home",
+                element: <Home />,
+              },
+              {
+                path: "/your-library",
+                element: <CardContainer />
+              },
+              {
+                path: "/your-library/:id/details",
+                element: <CardDetails />
+              },
+              {
+                path: "/play",
+                element: <GameContainer />
+              }
+            ]
+          }
+        ]
+      )
+
     return(
-        <CardList pokemonCards={pokemonCards} />
+        <>
+            <CardList pokemonCards={pokemonCards} />
+            <RouterProvider router={router} />
+        </>
     )
 }
 

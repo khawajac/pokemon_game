@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 const CardDetails = () => {
@@ -10,9 +11,11 @@ const CardDetails = () => {
                 <h2>{pokemonCard.details.name.toUpperCase()}</h2>
                 <ul>
                     <p>Abilities</p>
-                    <p>Ability 1</p>
-                    <p>Ability 1</p>
-                    <p>Ability 1</p>
+                    {pokemonCard.details.abilities.map((ability) => {
+                        return (
+                            <li>{ability.name}</li>
+                        )
+                    })}
                 </ul>
 
             </section>
