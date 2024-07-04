@@ -38,6 +38,14 @@ const CardContainer = () => {
         })
     }
 
+    const pokemonLoader = ({params}) => {
+      const pokemon = pokemonCards.find(card => {
+        return card.details.id === parseInt(params.id); 
+        })
+        return pokemon; 
+    } 
+
+
     useEffect(() => {
         fetchAllPokemon()
     }, [])
@@ -67,6 +75,7 @@ const CardContainer = () => {
               },
               {
                 path: "/your-library/:id/details",
+                loader: pokemonLoader, 
                 element: <CardDetails pokemonCards={pokemonCards}/>
               },
               {

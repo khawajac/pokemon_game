@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom"
+import { Link, useLoaderData } from "react-router-dom"
 
 
-const CardDetails = ({pokemonCards}) => {
+const CardDetails = () => {
 
+
+    const pokemonCards = useLoaderData(); 
 
     return (
 
@@ -15,7 +17,7 @@ const CardDetails = ({pokemonCards}) => {
                     <p>Abilities</p>
                     {pokemonCards.details.abilities.map((ability) => {
                         return (
-                            <li>{ability.name}</li>
+                            <li id="abilities">{ability.name}</li>
                         )
                     })}
                 </ul>

@@ -51,6 +51,9 @@ nav li:hover {
   transform: translateY(-2px)
 }
 
+#abilities {
+  color: black;
+}
 
 #title {
   text-align: center;
