@@ -7,6 +7,7 @@ function App() {
   return (
     <>
       <CardContainer/>
+      <footer><strong>powered by charisma</strong></footer>
     </>
   )
 }

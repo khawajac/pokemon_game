@@ -12,14 +12,12 @@ const CardDetails = () => {
         <>
             <section>
                 <h2>{pokemonCards.details.name.toUpperCase()}</h2>
-                <img src={pokemonCards.details.sprites.other['showdown'].front_shiny} alt="" />
+                <img src={pokemonCards.details.sprites.other['showdown'].front_shiny} alt="{pokemonCards.details.name}" />
                 <ul>
                     <p>Abilities</p>
-                    {pokemonCards.details.abilities.map((ability) => {
-                        return (
-                            <li id="abilities">{ability.name}</li>
-                        )
-                    })}
+                    {pokemonCards.details.abilities.map((ability, index) => (
+                            <li key={index} id="abilities">{ability.ability.name}</li>
+                    ))}
                 </ul>
             </section>
         </>

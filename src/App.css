@@ -4,19 +4,6 @@
   padding: 2rem;
   text-align: center;
 }
-
-body {
-  font-family: monospace;
-  background-color: #f2f2f2;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: 
-    linear-gradient(to top, white 50%, #FF1A1A 50%)
-}
-
 nav {
   background-color: #FF1A1A;
   position:absolute;
@@ -26,7 +13,6 @@ nav {
   z-index: 1000;
   padding: 1rem 0;
 }
-
 
 nav ul {
   list-style: none;
@@ -51,19 +37,22 @@ nav li:hover {
   transform: translateY(-2px)
 }
 
-#abilities {
-  color: black;
+body {
+  font-family: monospace;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: 
+    linear-gradient(to top, white 50%, #FF1A1A 50%)
 }
 
-#title {
-  text-align: center;
-  color: #ffcb05;
-  text-shadow: 2px 2px 0px #3b4cca;
-  margin: 20px 0;
-  font-size: 120px;
+h2, h3, p {
+  text-align: center; /* center align the text */
+  margin-bottom: 20px; /* adds space between each element */
 }
-
-/* i dont get why the font size wont change?? */
 
 h2 {
   text-align: center;
@@ -91,11 +80,6 @@ p {
   font-size: 25px;
 }
 
-h2, h3, p {
-  text-align: center; /* center align the text */
-  margin-bottom: 20px; /* adds space between each element */
-}
-
 section {
   display: flex;
   flex-wrap: wrap;
@@ -106,6 +90,28 @@ section {
 section img {
   width: 150px;
   height: 150px;
+}
+
+footer {
+  color: #333;
+  padding: 20px;
+  bottom: 0; 
+  width: 100%;
+  position: fixed; 
+  font-family:fantasy;
+
+}
+
+#abilities {
+  background-color: #f08030;
+}
+
+#title {
+  text-align: center;
+  color: #ffcb05;
+  text-shadow: 2px 2px 0px #3b4cca;
+  margin: 20px 0;
+  font-size: 120px;
 }
 
 .card {
