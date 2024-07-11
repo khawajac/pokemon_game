@@ -5,7 +5,10 @@ const CardDetails = () => {
 
 
     const pokemonCards = useLoaderData(); 
-    console.log(pokemonCards.details.stats)
+
+    const capitalFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1); 
+    }
 
     return (
 
@@ -13,21 +16,28 @@ const CardDetails = () => {
         <>
             <section className="card-details">
                 <h2>{pokemonCards.details.name.toUpperCase()}</h2>
-                <img src={pokemonCards.details.sprites.other['showdown'].front_shiny} alt="{pokemonCards.details.name}" />
+                <img 
+                src={pokemonCards.details.sprites.other['showdown'].front_shiny} 
+                alt="{pokemonCards.details.name}" 
+                className="card-image"/>
+                <div className="abilities">
                 <ul>
                     <p>Abilities</p>
                     {pokemonCards.details.abilities.map((ability, index) => (
                             <li key={index} id="abilities">{ability.ability && ability.ability.name ?
-                            ability.ability.name : 'Unknown'}</li>
+                            capitalFirstLetter(ability.ability.name) : 'Unknown'}</li>
                     ))}
                 </ul>
+                </div>
+                <div className="stats">
                 <ul>
                     <p>Stats</p>
-                    {pokemonCards.details.stats.map((stat, index) => 
-                        <li key={index} id="stat-name">{stat.stat && stat.stat.name ? `${stat.stat.name}: ${stat.base_stat}` : 'Unknown'}</li>
+                    {pokemonCards.details.stats.slice(0,3).map((stat, index) => 
+                        <li key={index} id="stat-name">{stat.stat && stat.stat.name ? `${capitalFirstLetter(stat.stat.name)}: ${stat.base_stat}` : 'Unknown'}</li>
                 
                 )}
                 </ul>
+                </div>
             </section>
         </>
             : 

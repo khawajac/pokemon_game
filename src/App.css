@@ -102,10 +102,6 @@ footer {
 
 }
 
-#abilities {
-  background-color: #f08030;
-}
-
 #title {
   text-align: center;
   color: #ffcb05;
@@ -114,22 +110,7 @@ footer {
   font-size: 120px;
 }
 
-.card {
-  background-color: #f8d030;
-  border: 2px solid #f08030; 
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin: 15px;
-  padding: 10px;
-  text-align: center;
-  width: 200px;
-  transition: transform 0.2s;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 300px; /* increased height for better spacing */
-}
+
 
 .card:hover {
   transform: scale(1.05);
@@ -172,7 +153,110 @@ footer {
   color: #333;
 }
 
+.card {
+  background-color: #f8d030;
+  border: 2px solid #f08030; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px; /* increased height for better spacing */
+}
+
+/* CardDetails */
+
 .card-details {
-  background-color: aqua;
+  background-color: #f8d030;
+  border: 3px solid #3b4cca;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  padding: 5vw;
+  max-width: 50vw;
+  margin: 30px auto;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  flex-direction: column; /* stack vertically */
+  align-items: center;
+  transform: scale(0.8);
+}
+
+.card-details h2 {
+  font-size: 3em;
+  color: #3b4cca;
+  margin-top: 0px;
+  text-shadow: 4px 3px 1px #fff;
+  background: none;
+}
+
+.card-details .card-image {
+  max-width:100%;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #3b4cca;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+
+.card-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-details li {
+  justify-content: space-between;
+  display: inline-block;
+
+}
+.card-details ul p {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-details .abilities {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.card-details .stats {
+  display: flex;
+  justify-content: space-around; /* Space stats evenly */
+  align-self: flex-end; /* Align stats to the bottom */
+  width: 100%; /* Ensure stats stretch across the container */
+}
+
+#abilities {
+  background-color: #ffcb05;
+}
+
+#stat-name {
+  background-color: #3b4cca;
+  color: #fff;
+} 
+
+#abilities, #stat-name {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.loading {
+  font-size: 1.5em;
+  text-align: center;
+  color: #333;
 }
 
