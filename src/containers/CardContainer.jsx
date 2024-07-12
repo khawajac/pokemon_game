@@ -14,7 +14,7 @@ const CardContainer = () => {
     const [loading, setLoading] = useState(false)
 
     const fetchAllPokemon = async () => {
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=15')
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100')
         const data = await response.json()
         setPokemonCards(data.results)
     }
