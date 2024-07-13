@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PokemonCard from "./PokemonCard";
 const CardList = ({pokemonCards}) => {
 
@@ -24,6 +24,10 @@ const CardList = ({pokemonCards}) => {
         pokemonCard={pokemonCard}
         key={index}/>
     })
+
+    useEffect(() => {
+        setFilteredCards(pokemonCards);
+    }, [pokemonCards]);
     
     return (
         <>
