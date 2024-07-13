@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 nav {
   background-color: #FF1A1A;
@@ -92,15 +93,6 @@ section img {
   height: 150px;
 }
 
-footer {
-  color: #333;
-  padding: 20px;
-  bottom: 0; 
-  width: 100%;
-  position: fixed; 
-  font-family:fantasy;
-
-}
 
 #title {
   text-align: center;
@@ -260,7 +252,19 @@ footer {
   color: #333;
 }
 
-.search-card-list {
-  color: white;
-  background-color: white;
+#search-card-list {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  margin: 20px 0; 
+}
+
+#search-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #FFCB05; 
+  border-radius: 10px; 
+  transition: box-shadow 0.3s ease-in-out;
+  font-family: 'Verdana', sans-serif; /* Add a playful font if you have one */
 }
