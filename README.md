@@ -1,6 +1,6 @@
 # Pokemon Game
 
-Welcome to the Pokémon Game project! This is a React-based web application that allows users to explore a library of Pokémon cards, view details of individual Pokémon, and play a simple game where two Pokémon cards are compared based on their HP.
+Welcome to the Pokémon Game project! This is a React-based web application that allows users to explore a library of Pokémon cards, view details of individual Pokémon and play a simple game where two Pokémon cards are compared based on their HP.
 
 ## Table of Contents
 
