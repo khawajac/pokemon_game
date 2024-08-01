@@ -28,7 +28,7 @@ Welcome to the Pokémon Game project! This is a React-based web application that
 
 ## Demo
 
-A live demo of the project can be found *coming soon**.
+A live demo of the project can be found *coming soon*.
 
 ## Installation
 
